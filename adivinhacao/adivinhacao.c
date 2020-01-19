@@ -4,7 +4,7 @@ int main()
 {
     // imprime cabecalho do nosso jogo
     printf("\n**************************************\n");
-    printf("Bem vindo ao nosso jogo de adivinhacao\n");
+    printf("Bem vindo ao nosso jogo de adivinhaçao\n");
     printf("**************************************\n");
 
     int numerosecreto = 42;
