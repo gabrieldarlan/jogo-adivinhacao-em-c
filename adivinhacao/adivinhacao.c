@@ -3,16 +3,14 @@
 
 int main()
 {
-    // imprime cabecalho do nosso jogo
     printf("\n**************************************\n");
     printf("Bem vindo ao nosso jogo de adivinhacao\n");
     printf("**************************************\n");
 
     int numerosecreto = 42;
-
     int chute;
     int tentativas = 1;
-    int pontos = 1000;
+    double pontos = 1000;
 
     while (1)
     {
@@ -44,10 +42,10 @@ int main()
             printf("Seu chute foi menor que o numero secreto\n");
         }
         tentativas++;
-        int pontosperdidos = (chute - numerosecreto) / 2;
+        double pontosperdidos = (double) (chute - numerosecreto) / 2;
         pontos = pontos - pontosperdidos;
     }
     printf("FIM DO JOGO!\n");
     printf("Voce acertou em %d tentativas\n", tentativas);
-    printf("Total de pontos: %d\n", pontos);
+    printf("Total de pontos: %.1f\n", pontos);
 }
