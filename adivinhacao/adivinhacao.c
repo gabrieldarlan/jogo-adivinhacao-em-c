@@ -12,15 +12,23 @@ int main()
     int numerosecreto = 42;
 
     int chute;
-    int acertou = (chute == numerosecreto);
-    int maior = (chute > numerosecreto);
-    // int menor = (chute < numerosecreto);
 
     for (int i = 1; i <= NUMERO_DE_TENTATIVAS; i++)
     {
         printf("Tentativa %d de %d\n", i, NUMERO_DE_TENTATIVAS);
         printf("Qual e o seu chute? ");
         scanf("%d", &chute);
+
+        if (chute < 0)
+        {
+            printf("voce nao pode chuter numeros negativos\n");
+            i--;
+            continue;
+        }
+        
+        int acertou = (chute == numerosecreto);
+        int maior = (chute > numerosecreto);
+        int menor = (chute < numerosecreto);
 
         if (acertou)
         {
@@ -32,7 +40,8 @@ int main()
         {
             printf("Seu chute foi maior que o numero secreto\n");
         }
-        else{
+        else
+        {
             printf("Seu chute foi menor que o numero secreto\n");
         }
     }
