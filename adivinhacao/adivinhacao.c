@@ -32,8 +32,7 @@ int main()
         {
             printf("Seu chute foi maior que o numero secreto\n");
         }
-        else
-        {
+        else{
             printf("Seu chute foi menor que o numero secreto\n");
         }
     }
